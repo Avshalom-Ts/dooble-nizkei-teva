@@ -1,0 +1,107 @@
+/* ==========================================================================
+   CSS Reset & Base Styles
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* RTL Support */
+html[dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+}
+
+html[dir="rtl"] body {
+    text-align: right;
+}
+
+body {
+    font-family: 'Assistant', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================================================
+   Layout Utilities
+   ========================================================================== */
+
+.main-content{
+    max-width: 1900px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* ==========================================================================
+   Images & Media
+   ========================================================================== */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ==========================================================================
+   WordPress Specific
+   ========================================================================== */
+
+.wp-caption {
+    max-width: 100%;
+    text-align: center;
+}
+
+.wp-caption-text {
+    font-size: 0.875rem;
+    color: #777777;
+    margin-top: 0.5rem;
+}
+
+.alignleft {
+    float: left;
+    margin: 0 1rem 1rem 0;
+}
+
+.alignright {
+    float: right;
+    margin: 0 0 1rem 1rem;
+}
+
+.aligncenter {
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+.screen-reader-text {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}

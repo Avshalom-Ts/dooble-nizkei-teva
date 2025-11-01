@@ -2,6 +2,13 @@
     <div class="footer-content">
         <div class="footer-columns">
 
+            <div class="desk-hidden">
+                <div class="footer-column footer-logo">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/kent-logo-white.png"
+                        alt="<?php bloginfo('name'); ?>" />
+                </div>
+            </div>
+
             <!-- Contact Info Column -->
             <div class="footer-column footer-contact-column">
                 <h3 class="footer-title">אנחנו פה בשבילך ונשמח לעזור!</h3>
@@ -91,9 +98,6 @@
                     </a>
                 </div>
             </div>
-
-
-
         </div>
 
         <!-- Credits -->

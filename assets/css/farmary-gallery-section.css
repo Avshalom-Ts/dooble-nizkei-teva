@@ -1,0 +1,134 @@
+/*==========================================================================
+   farmary-gallery-section
+   ========================================================================== */
+
+.farmary-gallery-section {
+    background: linear-gradient(180deg, #F0EEF4 0%, #F0EEF4 100%);
+    max-height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 4rem;
+    position: relative;
+}
+
+.farmary-gallery-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/leaf.png');
+    background-repeat: no-repeat;
+    background-position: calc(100% + 50px) calc(100% + 50px);
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.farmary-gallery-section-title-container{
+    width: 35%;
+    padding: 2rem;
+    padding-right: 220px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    z-index: 1;
+    position: relative;
+}
+
+.gallery-section-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+    direction: rtl;
+    text-align: right;
+}
+
+.gallery-section-content .section-title {
+    font-size: 3rem;
+    color: #452A7A;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.gallery-section-content .gallery-subtitle {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+    max-width: 500px;
+}
+
+.farmary-gallery-photos-container{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 2rem;
+    width: 65%;
+    position: relative;
+    z-index: 1;
+    padding: 4rem 0;
+}
+
+.farmary-gallery-photos-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../images/camera.png');
+    background-repeat: no-repeat;
+    background-size: 600px;
+    background-position: left bottom;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.farmary-gallery-photo-card{
+    background: white;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.farmary-gallery-photo-card:nth-child(1) {
+    margin-top: 3rem;
+}
+
+.farmary-gallery-photo-card:nth-child(2) {
+    margin-bottom: 3rem;
+}
+
+.farmary-gallery-photo-card:hover {
+    transform: translateY(-5px);
+}
+
+.farmary-gallery-photo{
+    width: 277px;
+    height: 282px;
+    object-fit: cover;
+}
+
+.photo-caption {
+    text-align: center;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.farmary-gallery-image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    width: 30%;
+    margin: 0;
+    padding: 0;
+    flex-wrap: nowrap;
+}

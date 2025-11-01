@@ -12,15 +12,18 @@ Version: 1.0
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* ==========================================================================
-   Modular CSS Architecture
+   Import Modular CSS Files
    ========================================================================== */
 
-/*
- * This theme uses a modular CSS architecture for better organization.
- * CSS files are automatically loaded via functions.php based on the 
- * $use_modular_css setting.
- * 
- * CSS Modules Location: /assets/css/
- * 
- */
-
+@import url('assets/css/base.css');
+@import url('assets/css/typography.css');
+@import url('assets/css/header.css');
+@import url('assets/css/news-section.css');
+@import url('assets/css/hero-section.css');
+@import url('assets/css/floating-buttons.css');
+@import url('assets/css/gallery-section.css');
+@import url('assets/css/farmary-gallery-section.css');
+@import url('assets/css/what-new-section.css');
+@import url('assets/css/footer.css');
+@import url('assets/css/rtl.css');
+@import url('assets/css/responsive.css');

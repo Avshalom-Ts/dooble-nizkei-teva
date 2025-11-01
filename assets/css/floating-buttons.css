@@ -1,0 +1,53 @@
+/* ==========================================================================
+   Floating Action Buttons
+   ========================================================================== */
+
+.floating-buttons {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
+
+.floating-btn {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.floating-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.floating-btn img {
+    width: 43px;
+    height: 43px;
+    object-fit: contain;
+}
+
+.whatsapp-btn {
+    background-color: #0AB285;
+}
+
+.whatsapp-btn:hover {
+    background-color: #22c55e;
+}
+
+.contact-btn {
+    background-color: #452A7A;
+}
+
+.contact-btn:hover {
+    background-color: #5a4fcf;
+}

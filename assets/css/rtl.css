@@ -1,0 +1,212 @@
+/* ==========================================================================
+   RTL (Right-to-Left) Support
+   ========================================================================== */
+
+/* RTL Body and HTML */
+html[dir="rtl"] * {
+    box-sizing: border-box;
+}
+
+/* LTR Reset when switching to English */
+html[dir="ltr"] {
+    direction: ltr;
+    text-align: left;
+}
+
+html[dir="ltr"] body {
+    text-align: left;
+    direction: ltr;
+}
+
+html[dir="ltr"] .navbar {
+    direction: ltr;
+}
+
+html[dir="ltr"] .navbar-left {
+    order: 1;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+html[dir="ltr"] .navbar-right {
+    order: 3;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+html[dir="ltr"] .navbar-center {
+    order: 2;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+html[dir="ltr"] .main-nav {
+    flex-direction: row;
+}
+
+html[dir="ltr"] .main-nav li {
+    margin-right: 0;
+    margin-left: 2rem;
+}
+
+html[dir="ltr"] .main-nav .sub-menu {
+    left: 0;
+    right: auto;
+}
+
+html[dir="ltr"] .main-nav .sub-menu a {
+    text-align: left;
+    padding: 0.75rem 1.5rem;
+}
+
+html[dir="ltr"] .main-nav .sub-menu a:hover {
+    padding-left: 1.5rem;
+    padding-right: 2rem;
+}
+
+html[dir="ltr"] .language-selector {
+    margin-right: 0;
+    padding-right: 0;
+}
+
+html[dir="ltr"] .language-dropdown-menu {
+    left: 0;
+    right: auto;
+}
+
+html[dir="ltr"] .text-left {
+    text-align: left;
+}
+
+html[dir="ltr"] .text-right {
+    text-align: right;
+}
+
+html[dir="ltr"] .alignleft {
+    float: left;
+    margin: 0 1rem 1rem 0;
+}
+
+html[dir="ltr"] .alignright {
+    float: right;
+    margin: 0 0 1rem 1rem;
+}
+
+html[dir="ltr"] input[type="text"],
+html[dir="ltr"] input[type="email"],
+html[dir="ltr"] input[type="password"],
+html[dir="ltr"] input[type="search"],
+html[dir="ltr"] textarea,
+html[dir="ltr"] select {
+    text-align: left;
+}
+
+/* RTL Navigation */
+html[dir="rtl"] .navbar {
+    direction: rtl;
+}
+
+html[dir="rtl"] .navbar-left {
+    order: 3;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+html[dir="rtl"] .navbar-right {
+    order: 1;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+html[dir="rtl"] .navbar-center {
+    order: 2;
+    left: auto;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+/* RTL Navigation Menu */
+html[dir="rtl"] .main-nav li {
+    margin-left: 0;
+    margin-right: 2rem;
+}
+
+/* RTL Dropdown Menus */
+html[dir="rtl"] .main-nav .sub-menu {
+    left: auto;
+    right: 0;
+}
+
+html[dir="rtl"] .main-nav .sub-menu a {
+    text-align: right;
+    padding: 0.75rem 1.5rem;
+}
+
+html[dir="rtl"] .main-nav .sub-menu a:hover {
+    padding-left: 2rem;
+    padding-right: 1.5rem;
+}
+
+/* RTL Language Selector */
+html[dir="rtl"] .language-selector {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+html[dir="rtl"] .language-dropdown-menu {
+    right: auto;
+    left: 0;
+}
+
+/* RTL Union Button */
+html[dir="rtl"] .union-btn {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .union-btn .union-icon {
+    margin-left: 0;
+    margin-right: 0.5rem;
+}
+
+/* RTL Search Icon */
+html[dir="rtl"] .search-icon {
+    margin-left: 0;
+}
+
+/* RTL Lists */
+html[dir="rtl"] ul, 
+html[dir="rtl"] ol {
+    padding-left: 0;
+    padding-right: 2rem;
+}
+
+/* RTL Text Alignment */
+html[dir="rtl"] .text-left {
+    text-align: right;
+}
+
+html[dir="rtl"] .text-right {
+    text-align: left;
+}
+
+/* RTL WordPress Alignments */
+html[dir="rtl"] .alignleft {
+    float: right;
+    margin: 0 0 1rem 1rem;
+}
+
+html[dir="rtl"] .alignright {
+    float: left;
+    margin: 0 1rem 1rem 0;
+}
+
+/* RTL Form Elements */
+html[dir="rtl"] input[type="text"],
+html[dir="rtl"] input[type="email"],
+html[dir="rtl"] input[type="password"],
+html[dir="rtl"] input[type="search"],
+html[dir="rtl"] textarea,
+html[dir="rtl"] select {
+    text-align: right;
+}

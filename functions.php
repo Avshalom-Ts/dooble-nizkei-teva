@@ -30,11 +30,33 @@ add_action('after_setup_theme', 'home_work_setup');
 // Enqueue styles and scripts
 function home_work_scripts()
 {
-    // Enqueue main stylesheet
-    wp_enqueue_style('home-work-style', get_stylesheet_uri(), array(), '1.0.0');
+    // Option 1: Use modular CSS approach (recommended for development)
+    $use_modular_css = true; // Set to false to use the original single CSS file
+
+    if ($use_modular_css) {
+        // Enqueue modular CSS files
+        wp_enqueue_style('home-work-base', get_template_directory_uri() . '/assets/css/base.css', array(), '1.0.0');
+        wp_enqueue_style('home-work-typography', get_template_directory_uri() . '/assets/css/typography.css', array('home-work-base'), '1.0.0');
+        wp_enqueue_style('home-work-header', get_template_directory_uri() . '/assets/css/header.css', array('home-work-base'), '1.0.0');
+        wp_enqueue_style('home-work-news-section', get_template_directory_uri() . '/assets/css/news-section.css', array('home-work-base'), '1.0.0');
+        wp_enqueue_style('home-work-hero-section', get_template_directory_uri() . '/assets/css/hero-section.css', array('home-work-base'), '1.0.0');
+        wp_enqueue_style('home-work-floating-buttons', get_template_directory_uri() . '/assets/css/floating-buttons.css', array('home-work-base'), '1.0.0');
+        wp_enqueue_style('home-work-gallery-section', get_template_directory_uri() . '/assets/css/gallery-section.css', array('home-work-base'), '1.0.0');
+        wp_enqueue_style('home-work-farmary-gallery', get_template_directory_uri() . '/assets/css/farmary-gallery-section.css', array('home-work-base'), '1.0.0');
+        wp_enqueue_style('home-work-what-new', get_template_directory_uri() . '/assets/css/what-new-section.css', array('home-work-base'), '1.0.0');
+        wp_enqueue_style('home-work-footer', get_template_directory_uri() . '/assets/css/footer.css', array('home-work-base'), '1.0.0');
+        wp_enqueue_style('home-work-rtl', get_template_directory_uri() . '/assets/css/rtl.css', array('home-work-base'), '1.0.0');
+        wp_enqueue_style('home-work-responsive', get_template_directory_uri() . '/assets/css/responsive.css', array('home-work-base'), '1.0.0');
+    } else {
+        // Option 2: Use original single CSS file
+        wp_enqueue_style('home-work-style', get_stylesheet_uri(), array(), '1.0.0');
+    }
 
     // Enqueue Google Fonts (fallback if CSS import doesn't work)
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap', array(), null);
+
+    // Enqueue main JavaScript file
+    wp_enqueue_script('home-work-main', get_template_directory_uri() . '/assets/js/main.js', array(), '1.0.0', true);
 }
 add_action('wp_enqueue_scripts', 'home_work_scripts');
 

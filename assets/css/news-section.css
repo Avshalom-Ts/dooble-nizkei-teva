@@ -1,0 +1,78 @@
+/* ==========================================================================
+   news-section
+   ========================================================================== */
+
+   .news-section {
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(90deg, #452A7A 0%, #452A7A 100%);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.news-title-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 0.5rem;
+   }
+
+    .news-section-title {
+     color: #FFFFFF;
+     font-size: 16px;
+     line-height: 40px;
+     text-align: center;
+     font-weight: 400;
+     margin: 0;
+     white-space: nowrap;
+    }
+
+    .play-button {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background-image: url('../images/pause-button.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        flex-shrink: 0;
+    }
+
+    .news-section .play-button {
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        background-image: url('../images/pause-button.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        flex-shrink: 0;
+    }
+
+    .h-divider {
+        width: 1px;
+        height: 16px;
+        background-color: #FFFFFF;
+        margin: 0 8px;
+    }
+
+    .w-divider {
+        width: 80%;
+        height: 1px;
+        background-color: #452A7A;
+        margin: 0 8px;
+        opacity: 0.2;
+    }
+
+/* RTL News Section */
+html[dir="rtl"] .news-title-container {
+    direction: rtl;
+}
+
+html[dir="rtl"] .news-section-title {
+    direction: rtl;
+    text-align: center;
+}
